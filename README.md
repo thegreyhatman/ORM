@@ -47,7 +47,9 @@ class PlayerAdmin(admin.ModelAdmin):
 
 ## OUTPUT
 
-![Alt text](<Screenshot 2023-10-28 154119.png>)
+
+![image](https://github.com/thegreyhatman/ORM/assets/136783487/35bf40a0-1ec3-469b-a1cc-92e17e728b25)
+
 
 
 ## RESULT
