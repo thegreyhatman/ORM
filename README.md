@@ -1,8 +1,11 @@
 # Ex02 Django ORM Web Application
-## Date: 7/11/2023
+## Date: 14.9.2023
 
 ## AIM
 To develop a Django application to store and retrieve data from a Football Players database using Object Relational Mapping(ORM).
+
+
+## DESIGN STEPS
 
 ### STEP 1:
 Clone the problem from GitHub
@@ -19,29 +22,32 @@ Execute Django admin and create 10 Football players
 ## PROGRAM
 
 ```
-Model.py
+Admin.py
+
+from django.contrib import admin
+from .models import Player,PlayerAdmin
+admin.site.register(Player,PlayerAdmin)
+
+Models.py
 
 from django.db import models
 from django.contrib import admin
-class Football (models.Model):
-    Place=models.CharField(max_length=20,help_text="Employee ID")
+class Player (models.Model):
+    pid=models.CharField(max_length=20,help_text="Player ID")
     name=models.CharField(max_length=100)
-    Pskill=models.IntegerField()
-    age=models.IntegerField()
-    Jersynumber=models.IntegerField()
+    height=models.IntegerField()
+    weight=models.IntegerField()
+    phone_no=models.IntegerField()
 
-class FootballAdmin(admin.ModelAdmin):
-    list_display=('Place','name','Pskill','age','Jersynumber')
+class PlayerAdmin(admin.ModelAdmin):
+    list_display=('pid','name','height','weight','phone_no')
 
-admin.py
 
-from django.contrib import admin
-from .models import Football,FootballAdmin
-admin.site.register(Football,FootballAdmin)
 ```
 
 ## OUTPUT
-![Alt text](<Screenshot (21).png>)
+
+![Alt text](<Screenshot 2023-10-28 154119.png>)
 
 
 ## RESULT
